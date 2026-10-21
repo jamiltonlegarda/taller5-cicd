@@ -18,7 +18,7 @@ app.get('/funcionalidad', async (req, res) => {
     return res.status(503).send('CONFIGCAT_SDK_KEY no está configurada');
   }
 
-  const enabled = await configCatClient.getValueAsync('nueva-funcionalidad-x', false);
+  const enabled = await configCatClient.getValueAsync('nuevafuncionalidadx', false);
   res.send(enabled ? 'Nueva funcionalidad' : 'Funcionalidad antigua');
 });
 
