@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: taller5-cicd
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
