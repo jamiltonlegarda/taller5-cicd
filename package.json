@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-     "start": "node server.js",
-     "test": "jest"
+    "start": "node server.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/jamiltonlegarda/taller5-cicd#readme",
   "dependencies": {
+    "configcat-node": "^11.4.1",
     "express": "^5.3.0"
   },
   "devDependencies": {

@@ -5,3 +5,6 @@ services:
     buildCommand: npm install
     startCommand: npm start
     healthCheckPath: /health
+    envVars:
+      - key: CONFIGCAT_SDK_KEY
+        sync: false
