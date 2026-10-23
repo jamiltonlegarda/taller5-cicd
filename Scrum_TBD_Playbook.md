@@ -93,3 +93,35 @@ Una historia está lista para entrar al trabajo cuando:
 1. Monitorear los próximos 5 despliegues automáticos en Render.
 2. Crear toggles para las próximas 2 historias del backlog.
 3. Revisar el nuevo DoD en la próxima Retrospective.
+
+## Política de Liberación Segura (Feature Toggles - Taller 6)
+
+- Ninguna funcionalidad se libera al 100% de los usuarios de forma inmediata.
+- Flujo de liberación estándar: Equipo interno -> 5% de usuarios -> 20% de usuarios -> 100%.
+- Criterio de Rollback: Se desactivará el toggle si la tasa de errores del flujo principal supera el 0.5% o si el health check falla.
+- Regla de oro: La presión comercial no anula la necesidad de un pipeline estable y métricas claras.
+- Limpieza: Todo toggle debe ser eliminado del código en un máximo de 30 días tras su liberación total.
+
+## Formato Oficial de Sprint Review (CD - Taller 6)
+
+1. Presentación del problema de usuario y la solución técnica.
+2. Demostración en producción (Render) mostrando el estado real con el Toggle en OFF.
+3. Activación temporal del Toggle solo para el equipo, demostrando el flujo completo.
+4. Validación del valor por parte del PO.
+5. Comunicación transparente sobre el estado de liberación (interno vs público).
+
+## Formato Oficial de Sprint Retrospective (Taller 6)
+
+La retrospectiva debe analizar obligatoriamente:
+
+1. **Salud del Pipeline:** Fallos de CI, rollbacks, tiempos de deploy.
+2. **Disciplina TBD:** Frecuencia de integración, vida de las ramas, limpieza de toggles.
+3. **Flujo de Valor:** Lead time y disponibilidad de métricas.
+
+_Regla estricta: Se seleccionan máximo 3 acciones concretas y asignables para el siguiente sprint._
+
+## Acuerdos de Cierre (Taller 6)
+
+**Pregunta:** En una frase, ¿qué cambia en nuestro próximo Review y Retro después de este taller?
+
+**Respuesta del equipo:** El Review se enfocará en demostrar valor real en producción usando toggles y el estado del pipeline; la Retro medirá la salud técnica y la disciplina TBD, priorizando la estabilidad sobre la presión comercial.
